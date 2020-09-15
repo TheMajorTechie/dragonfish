@@ -2,11 +2,11 @@
     <div class="approval-queue-header">
         <h2>Approval Queue</h2>
         <div class="queue-controls">
-            <button class="queue-filter" (click)="changeQueueView()" *ngIf="!forMe; else resetQueue"><i-feather name="filter" style="margin-right: 1rem;"></i-feather>My Claims</button>
+            <button matRipple class="queue-filter" (click)="changeQueueView()" *ngIf="!forMe; else resetQueue"><i-feather name="filter" style="margin-right: 1rem;"></i-feather>My Claims</button>
             <ng-template #resetQueue>
-                <button class="queue-filter active" (click)="changeQueueView()"><i-feather name="filter" style="margin-right: 1rem;"></i-feather>My Claims</button>
+                <button matRipple class="queue-filter active" (click)="changeQueueView()"><i-feather name="filter" style="margin-right: 1rem;"></i-feather>My Claims</button>
             </ng-template>
-            <button class="queue-refresh" (click)="forceRefresh()"><i-feather name="refresh-cw" style="margin-right: 1rem;"></i-feather>Refresh</button>
+            <button matRipple class="queue-refresh" (click)="forceRefresh()"><i-feather name="refresh-cw" style="margin-right: 1rem;"></i-feather>Refresh</button>
         </div>
     </div>
     <hr class="header-divider">
@@ -57,11 +57,11 @@
                         <img class="claimed-avatar" src="{{ entry.claimedBy.profile.avatar }}">
                     </div>
                     <div class="work-control-buttons" *ngIf="!checkIfClaimed(entry) && !checkIfClaimedByThisUser(entry)">
-                        <button class="work-controls-single" (click)="claimWork(entry)"><i-feather name="plus-square"></i-feather></button>
+                        <button matRipple class="work-controls-single" (click)="claimWork(entry)"><i-feather name="plus-square"></i-feather></button>
                     </div>
                     <div class="work-control-buttons" *ngIf="checkIfClaimedByThisUser(entry)">
-                        <button class="work-controls" style="border-right: 0;" (click)="approveWork(entry)"><i-feather name="check"></i-feather></button>
-                        <button class="work-controls right" (click)="rejectWork(entry)"><i-feather name="x"></i-feather></button>
+                        <button matRipple class="work-controls" style="border-right: 0;" (click)="approveWork(entry)"><i-feather name="check"></i-feather></button>
+                        <button matRipple class="work-controls right" (click)="rejectWork(entry)"><i-feather name="x"></i-feather></button>
                     </div>
                 </div>
             </div>
@@ -105,11 +105,11 @@
                             <img class="claimed-avatar" src="{{ entry.claimedBy.profile.avatar }}">
                         </div>
                         <div class="work-control-buttons" *ngIf="!checkIfClaimed(entry) && !checkIfClaimedByThisUser(entry)">
-                            <button class="work-controls-single" (click)="claimWork(entry)"><i-feather name="plus-square"></i-feather></button>
+                            <button matRipple class="work-controls-single" (click)="claimWork(entry)"><i-feather name="plus-square"></i-feather></button>
                         </div>
                         <div class="work-control-buttons" *ngIf="checkIfClaimedByThisUser(entry)">
-                            <button class="work-controls" style="border-right: 0;" (click)="approveWork(entry)"><i-feather name="check"></i-feather></button>
-                            <button class="work-controls right" (click)="rejectWork(entry)"><i-feather name="x"></i-feather></button>
+                            <button matRipple class="work-controls" style="border-right: 0;" (click)="approveWork(entry)"><i-feather name="check"></i-feather></button>
+                            <button matRipple class="work-controls right" (click)="rejectWork(entry)"><i-feather name="x"></i-feather></button>
                         </div>
                     </div>
                 </div>
